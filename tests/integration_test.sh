@@ -49,7 +49,7 @@ function test_1 {
 	ACTUAL="$OUTPUT_DIR/test_1.seq2c_results_sample1.txt"
 	EXPECTED="$TEST_DIR/expected/expected_Colo_sample1.txt"
 
-	seq2c.sh $SAMPLE2BAM $BED
+	$SEQ2C_PATH/seq2c.sh $SAMPLE2BAM $BED
 	mv $OUTPUT $ACTUAL
 	diff_results 1 "$EXPECTED" "$ACTUAL"
 }
@@ -65,7 +65,7 @@ function test_2 {
 	ACTUAL="$OUTPUT_DIR/test_2.seq2c_results_sample1_control.txt"
 	EXPECTED="$TEST_DIR/expected/expected_Colo_sample1_control.txt"
 
-	seq2c.sh $SAMPLE2BAM $BED $CONTROL_SAMPLE
+	$SEQ2C_PATH/seq2c.sh $SAMPLE2BAM $BED $CONTROL_SAMPLE
 	mv $OUTPUT $ACTUAL
 	diff_results 2 "$EXPECTED" "$ACTUAL"
 }
@@ -81,7 +81,7 @@ function test_3 {
 	ACTUAL="$OUTPUT_DIR/test_3.seq2c_results_GTL_16_5.txt"
 	EXPECTED="$TEST_DIR/expected/expected_GTL_16_5.txt"
 
-	seq2c.sh $SAMPLE2BAM $BED $CONTROL_SAMPLE
+	$SEQ2C_PATH/seq2c.sh $SAMPLE2BAM $BED $CONTROL_SAMPLE
 	mv $OUTPUT $ACTUAL
 	diff_results 3 "$EXPECTED" "$ACTUAL"
 }
